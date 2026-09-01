@@ -29,27 +29,34 @@ export function Header() {
         >
           Enquire <ArrowRight className="h-4 w-4" />
         </Link>
-        <details className="group relative sm:hidden">
+        <details className="group sm:hidden">
           <summary
             aria-label="Open navigation menu"
-            className="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-full bg-charcoal text-cream transition hover:bg-plum [&::-webkit-details-marker]:hidden"
+            className="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-full bg-charcoal text-cream shadow-[0_10px_30px_rgba(38,31,35,0.18)] transition hover:bg-plum [&::-webkit-details-marker]:hidden"
           >
             <Menu className="h-5 w-5" />
           </summary>
-          <div className="absolute right-0 top-14 z-50 w-64 rounded-3xl border border-charcoal/10 bg-porcelain p-3 shadow-[0_24px_70px_rgba(38,31,35,0.18)]">
-            <div className="grid gap-1">
+          <div className="absolute left-4 right-4 top-[5.25rem] z-50 overflow-hidden rounded-[1.75rem] border border-charcoal/10 bg-cream shadow-[0_24px_70px_rgba(38,31,35,0.2)]">
+            <div className="border-b border-charcoal/10 bg-sage/45 px-5 py-4">
+              <p className="text-sm font-black text-charcoal">Menu</p>
+              <p className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-brick">
+                Vellum Frame
+              </p>
+            </div>
+            <div className="grid gap-2 p-3">
               {navItems.map(([label, href]) => (
                 <Link
                   key={href}
                   href={href}
-                  className="rounded-2xl px-4 py-3 text-sm font-black text-charcoal hover:bg-sage/50"
+                  className="flex items-center justify-between rounded-2xl bg-porcelain px-4 py-3 text-sm font-black text-charcoal transition hover:bg-sage/55 hover:text-plum"
                 >
-                  {label}
+                  <span>{label}</span>
+                  <ArrowRight className="h-4 w-4 text-brick/70" />
                 </Link>
               ))}
               <Link
                 href="/contact"
-                className="mt-2 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-plum px-4 text-sm font-black text-cream"
+                className="mt-1 inline-flex h-12 items-center justify-center gap-2 rounded-2xl bg-plum px-4 text-sm font-black text-cream shadow-[0_12px_30px_rgba(75,37,79,0.22)] transition hover:bg-charcoal"
               >
                 Enquire <ArrowRight className="h-4 w-4" />
               </Link>
