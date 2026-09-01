@@ -56,7 +56,7 @@ export function Header() {
               ))}
               <Link
                 href="/contact"
-                className="mt-1 inline-flex h-12 items-center justify-center gap-2 rounded-2xl bg-plum px-4 text-sm font-black text-cream shadow-[0_12px_30px_rgba(75,37,79,0.22)] transition hover:bg-charcoal"
+                className="mt-1 inline-flex h-12 items-center justify-center gap-2 rounded-2xl bg-plum px-4 text-sm font-black text-cream shadow-[0_12px_30px_rgba(33,68,61,0.22)] transition hover:bg-charcoal"
               >
                 Enquire <ArrowRight className="h-4 w-4" />
               </Link>
